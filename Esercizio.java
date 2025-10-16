@@ -1,26 +1,34 @@
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
-
-//Import di Classi Java necessarie al funzionamento del programma
+package main;
 import java.util.Scanner;
+import java.util.Random;
+import java.util.Vector;
+public class main {
 
-// Classe principale, con metodo main
-class Esercizio {
-    // Il programma parte con una chiamata a main().
-    public static void main(String args[])
-    {
-        //Variabili del programma
-        String nome;
+	public static void main(String[] args) {
+		Scanner in =new Scanner(System.in);
+		Random random=new Random();
+		int n;
+		int x;
+		int i=0;
+		int n1,n2;
+		n1=0;
+		n2=0;
+		System.out.println("inserisci i numeri da genrare");
+		n=in.nextInt();
+		int []  D =new int [n];
+		int [] P= new int [n];
+		while(i<n) {
+			x=random.nextInt(n*10)+1;
+			if(x%2==0) {
+				P[n2]=x;
+				++n2;
+				
+			}else {
+				D[n1]=x;
+				++n1;
+			}
+		}
 
-        //Creo l'oggetto in per l'input da tastiera
-        Scanner in = new Scanner( System.in );
+	}
 
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
-
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
-    }
 }
-
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
